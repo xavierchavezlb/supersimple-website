@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gordo's Barber Shop</title>
+  <title>Barber Shop El Gordo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    h1 {
+      text-align: center;
+    }
+    .form-container {
+      margin-top: 20px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.1);
+      width: 90%;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      margin: 5px;
+      width: 200px;
+      height: 200px;
+    }
+    .logo {
+      width: 200px;
+    }
+    .cash-only {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Gordo's Barber Shop - Haircut Appointments</h1>
-  <form method="post" action="process_form.php">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="type">Type:</label>
-    <select id="type" name="type" required>
-      <option value="haircut">Haircut</option>
-      <option value="haircut-beard">Haircut and Beard</option>
-    </select><br><br>
-
-    <label for="time">Select an appointment time:</label>
-    <select id="time" name="time" required>
-      <option value="friday-7pm">Friday - 7:00 PM</option>
-      <option value="friday-8pm">Friday - 8:00 PM</option>
-      <option value="friday-9pm">Friday - 9:00 PM</option>
-      <option value="friday-10pm">Friday - 10:00 PM</option>
-      <option value="friday-11pm">Friday - 11:00 PM</option>
-      <option value="friday-12am">Friday - 12:00 AM</option>
-      <option value="saturday-7pm">Saturday - 7:00 PM</option>
-      <option value="saturday-8pm">Saturday - 8:00 PM</option>
-      <option value="saturday-9pm">Saturday - 9:00 PM</option>
-      <option value="saturday-10pm">Saturday - 10:00 PM</option>
-      <option value="saturday-11pm">Saturday - 11:00 PM</option>
-      <option value="saturday-12am">Saturday - 12:00 AM</option>
-      <option value="sunday-7pm">Sunday - 7:00 PM</option>
-      <option value="sunday-8pm">Sunday - 8:00 PM</option>
-      <option value="sunday-9pm">Sunday - 9:00 PM</option>
-      <option value="sunday-10pm">Sunday - 10:00 PM</option>
-      <option value="sunday-11pm">Sunday - 11:00 PM</option>
-      <option value="sunday-12am">Sunday - 12:00 AM</option>
-    </select><br><br>
-
-    <input type="submit" value="Submit">
-  </form>
+  <img class="logo" src="LOGO_URL" alt="El Gordo Logo">
+  <h1>Barber Shop El Gordo</h1>
+  <div class="gallery">
+    <script>
+      for(let i = 1; i <= 8; i++) {
+        document.write(`<img src="Cuts/image${i}.jpg" alt="Haircut ${i}">`);
+      }
+    </script>
+  </div>
+  <div class="form-container">
+    <h2>Make an Appointment</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZkA-7qomjXDGvbY6Xg4zff4_rxZW_P1aBcs7bSxbmrl_sAw/viewform?embedded=true" 
+            width="100%" 
+            height="500" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0">Loading…</iframe>
+  </div>
+  <p class="cash-only">We accept cash only.</p>
 </body>
 </html>
+
